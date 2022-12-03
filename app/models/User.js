@@ -1,6 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { mySequelize } from "../database";
-import Role from "./Roles";
 
 class User extends Model {}
 
@@ -27,8 +26,11 @@ User.init(
       allowNull: false,
     },
     role_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER
     },
+    team_id: {
+      type: DataTypes.INTEGER
+    }
   },
   {
     mySequelize,
